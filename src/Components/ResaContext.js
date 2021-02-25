@@ -1,7 +1,11 @@
 import React, {createContext, useState} from "react";
 
 export const InitialContext = {
-  "departure" : "Paris"
+  InitialContext: {
+    departure: 'Paris',
+    arrival : 'Marseille',
+    passenger : 2
+  }
 }
 
 //Creer un ctx

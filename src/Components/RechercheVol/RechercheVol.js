@@ -1,29 +1,35 @@
-import React, { useContext, createContext, useState } from "react";
+import React, { useContext, createContext, useState, useCallback } from "react";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
-import { UserContext } from "../UserContext";
+import Button from "react-bootstrap/Button";
+
 import { ResaContext } from "../ResaContext";
 import { ResaProvider } from '../ResaContext';
+
+
 
 const RechercheVol = () => {
 
   const HandleTextChange = ()=>{
-    setresa(InitialContext);
-    console.log(resa)
-
+ 
+   // console.log(ResaProvider.resa)
 
   }
+
+  const handleSubmit= useCallback(function(value) {
+    console.log(value)
+  })
   return (
     <div>
       RechercheVol
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Form.Group>
           <Form.Row>
             <Col>
               <Form.Control
                 name="departure"
                 
-               // value={resa.departure}
+              // value={resa.departure}
                 onChange={HandleTextChange}
                 placeholder="Ville de départ"
               />
@@ -43,7 +49,8 @@ const RechercheVol = () => {
               <Form.Control
                 type="date"
                 name="dob"
-                placeholder="Date of Birth"
+                onChange={(e)=>{console.log(e.target)}}
+
               />
             </Col>
           </Form.Row>
@@ -56,11 +63,12 @@ const RechercheVol = () => {
             </Col>
             <Col>
               <Form.Group controlId="formBasicCheckbox">
-                <Form.Control type="number" name="test" min="1" max="8" />
+                <Form.Control type="number" name="passenger" min="1" max="8" />
               </Form.Group>
             </Col>
           </Form.Row>
         </Form.Group>
+        <Button variant="outline-success" >Envoyer</Button>
       </Form>
     </div>
   );

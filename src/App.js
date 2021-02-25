@@ -20,9 +20,9 @@ function App() {
         {/*
             <FirstDepartureCity.Provider value={defaultDepartureCity}>
         */}
-        <ResaContext.Provider >
+        <ResaProvider >
            <Homepage/>
-        </ResaContext.Provider>
+        </ResaProvider>
            {/*
                </FirstDepartureCity.Provider>
            */}
