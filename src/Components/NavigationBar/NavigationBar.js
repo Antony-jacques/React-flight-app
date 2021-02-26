@@ -12,7 +12,7 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 const NavigationBar = () => {
     return (
       <div>
-            NavigationBar <BsFillPersonFill/>
+             
             <Navbar bg="light" expand="lg">
               <Navbar.Brand href="#home">React Vols App</Navbar.Brand>
               
@@ -23,8 +23,7 @@ const NavigationBar = () => {
                     <Nav.Link href="#link">Se connecter</Nav.Link>
                   </Nav>
               </Navbar.Collapse>
-              <BsFillPersonFill/>
-              <BsFillPersonLinesFill/>
+
             </Navbar>
       </div>
     );

@@ -4,15 +4,24 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 
 import { ResaContext } from "../ResaContext";
-import { ResaProvider } from '../ResaContext';
 
 
 
 const RechercheVol = () => {
+  const value = useContext(ResaContext);
 
-  const HandleTextChange = ()=>{
+  //const [resa, setresa] = useContext(ResaContext);
+
+//  let toto = useContext(ResaContext);
+
+  const HandleTextChange = (e)=>{
+
+
+    //setresa(e.target.value);
+
+    console.log('value : ', value);
  
-   // console.log(ResaProvider.resa)
+   // console.log(toto[0].InitialContext.arrival)
 
   }
 
@@ -21,15 +30,15 @@ const RechercheVol = () => {
   })
   return (
     <div>
-      RechercheVol
-      <Form onSubmit={handleSubmit}>
+
+      <Form className="mt-4" onSubmit={handleSubmit}>
         <Form.Group>
           <Form.Row>
             <Col>
               <Form.Control
                 name="departure"
                 
-              // value={resa.departure}
+              
                 onChange={HandleTextChange}
                 placeholder="Ville de départ"
               />
@@ -68,7 +77,7 @@ const RechercheVol = () => {
             </Col>
           </Form.Row>
         </Form.Group>
-        <Button variant="outline-success" >Envoyer</Button>
+        <Button variant="success" >Envoyer</Button>
       </Form>
     </div>
   );

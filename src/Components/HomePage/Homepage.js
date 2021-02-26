@@ -5,8 +5,7 @@ import Pub from "../Pub/Pub";
 import RechercheVol from "../RechercheVol/RechercheVol";
 import Form from "react-bootstrap/Form";
 
-import { UserContext } from "../UserContext";
-import { ResaContext } from "../ResaContext";
+
 import { ResaProvider } from "../ResaContext";
 
 export const Homepage = () => {
@@ -18,7 +17,6 @@ export const Homepage = () => {
 
   return (
     <div>
-      <p>Homepage</p>
 
       <NavigationBar />
       <div></div>
